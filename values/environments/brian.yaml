@@ -17,8 +17,3 @@ configmaps:
     data: 
       goog_URL: "www.google.com"
       goog_port: "443"
-
-  - name: app.config
-    data: 
-      FORCE_AP_2FA: "false"
-      use_tls: "true"
