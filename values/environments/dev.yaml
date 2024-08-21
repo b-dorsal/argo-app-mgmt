@@ -1,3 +1,4 @@
+namespace: dev
 
 nginx-a:
   namespace: dev
