@@ -16,7 +16,7 @@ spec:
         - {{ .helmValuesFile }}
       {{- end }}
   destination:
-    server: https://kubernetes.default.svc
+    name: in-cluster
     namespace: {{ .name }}
   syncPolicy:
     automated:
