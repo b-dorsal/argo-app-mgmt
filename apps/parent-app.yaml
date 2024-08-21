@@ -17,5 +17,4 @@ spec:
       selfHeal: true
   componentParameterOverrides:
     - name: dev-app.yaml
-    - name: staging-app.yaml
-    - name: prod-app.yaml
+    - name: brian-app.yaml
