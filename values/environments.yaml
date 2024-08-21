@@ -5,13 +5,16 @@ environments:
     - name: nginx-a
       helmValues:
         replicaCount: 1
+        namespace: dev
     - name: nginx-b
       helmValues:
         replicaCount: 1
+        namespace: dev
 
 
 - name: brian
   services:
     - name: nginx-a
       helmValues:
+        namespace: brian
         replicaCount: 1
