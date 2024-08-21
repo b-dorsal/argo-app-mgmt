@@ -9,7 +9,7 @@ spec:
   sources:
     {{- range .services }}
     - repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
-      name: {{ .name }}-{{ .services.name }}
+      name: {{ .name }}-{{ $.name }}
       path: charts/{{ .name }}
       targetRevision: HEAD
       helm:
