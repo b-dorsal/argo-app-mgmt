@@ -4,7 +4,7 @@ environments:
   services:
     - name: nginx-a
       helmValues:
-        replicaCount: 1
+        replicaCount: 2
         namespace: dev
     - name: nginx-b
       helmValues:
