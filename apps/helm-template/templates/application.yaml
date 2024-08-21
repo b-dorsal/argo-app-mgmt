@@ -6,13 +6,6 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  destination:
-    name: in-cluster
-    namespace: {{ .name }}
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
   sources:
     {{- range .services }}
     - repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
@@ -21,6 +14,13 @@ spec:
       helm:
         valueFiles:
         - {{ .helmValuesFile }}
-    {{- end }}
+      {{- end }}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: {{ .name }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
 ---
 {{- end }}
