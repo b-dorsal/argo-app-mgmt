@@ -3,13 +3,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: Project
 metadata:
   name: {{ .name }}
+  namespace: argocd
 spec:
   description: {{ .name }} created by argo
   sourceRepos:
     - '*'
   destinations:
     - name: in-cluster
-      namespace: {{ .name }}
+      namespace: argocd
   clusterResourceWhitelist:
     - group: '*'
       resource: '*'
