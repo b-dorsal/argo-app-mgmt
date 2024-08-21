@@ -29,8 +29,8 @@ spec:
     path: charts/{{ .name }}
     targetRevision: HEAD
     helm:
-      valueFiles:
-      - {{ .helmValuesFile }}
+      parameters:
+      {{- toYaml .helmValues | nindent 8 }}
   destination:
     name: in-cluster
     namespace: {{ .name }}

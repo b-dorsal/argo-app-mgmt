@@ -3,13 +3,15 @@ environments:
 - name: dev
   services:
     - name: nginx-a
-      helmValuesFile: values/dev-values.yaml
+      helmValues:
+        replicaCount: 1
     - name: nginx-b
-      helmValuesFile: values/dev-values.yaml
-
+      helmValues:
+        replicaCount: 1
 
 
 - name: brian
   services:
     - name: nginx-a
-      helmValuesFile: values/brian-values.yaml
+      helmValues:
+        replicaCount: 1
