@@ -1,15 +1,12 @@
-{{- range $configmap := .Values.configmaps }}
-
-
+{{- range $configMapName, $configMapData := .Values.configmaps }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ $configmap.name }}
-  namespace: {{ $.Values.namespace }}
+  name: {{ $configMapName }}
+  namespace: {{ .Values.namespace | default "default" }}
 data:
-  {{- range $key, $val  := $configmap.data }}
-  {{ $key }} : '{{ $val }}'
+  {{- range $key, $value := $configMapData }}
+  {{ $key }}: {{ $value | quote }}
   {{- end }}
-
 ---
 {{- end }}
