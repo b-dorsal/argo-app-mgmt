@@ -5,13 +5,19 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
-    path: charts/nginx-a
-    targetRevision: HEAD
-    helm:
-      valueFiles:
-      - values/brian-values.yaml
+  sources:
+    - repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
+      path: charts/nginx-a
+      targetRevision: HEAD
+      helm:
+        valueFiles:
+        - values/brian-values.yaml
+    - repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
+      path: charts/nginx-b
+      targetRevision: HEAD
+      helm:
+        valueFiles:
+        - values/brian-values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: brian
