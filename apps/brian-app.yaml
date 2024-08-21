@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-brian
+  name: brian
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
-    path: charts/nginx
+    path: charts/nginx-a
     targetRevision: HEAD
     helm:
       valueFiles:

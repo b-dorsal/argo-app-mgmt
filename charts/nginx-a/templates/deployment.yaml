@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: nginx-a
   namespace: {{ .Values.namespace }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-a
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-a
     spec:
       containers:
       - name: nginx
