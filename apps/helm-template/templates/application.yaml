@@ -8,12 +8,12 @@ spec:
   project: default
   sources:
     {{- range .services }}
-    repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
-    path: charts/{{ .name }}
-    targetRevision: HEAD
-    helm:
-      valueFiles:
-      - {{ .helmValuesFile }}
+    - repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
+      path: charts/{{ .name }}
+      targetRevision: HEAD
+      helm:
+        valueFiles:
+        - {{ .helmValuesFile }}
     {{- end }}
   destination:
     server: https://kubernetes.default.svc
