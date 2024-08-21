@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - values/environments.yaml
+        - values.yaml
   destination:
     name: in-cluster
     namespace: argocd
