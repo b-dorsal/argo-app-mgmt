@@ -30,6 +30,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
+        - ../../values/environments/core.yaml
         - ../../values/environments/{{ $project.name }}.yaml
   destination:
     name: in-cluster
