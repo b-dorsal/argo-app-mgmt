@@ -11,3 +11,10 @@ namespace: brian
   replicaCount: 1
   image:
     tag: "1.23.1"
+
+configmaps:
+  - name: google_url
+    data: www.google.com
+
+  - name: app.config
+    data: testing
