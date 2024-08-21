@@ -31,7 +31,7 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-        - ../../values/environments{{ $project.name }}.yaml
+        - ../../values/environments/{{ $project.name }}.yaml
   destination:
     name: in-cluster
     namespace: {{ $project.name }}
