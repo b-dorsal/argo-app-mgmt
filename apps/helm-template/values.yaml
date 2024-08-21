@@ -1,4 +1,4 @@
-projects:
+environments:
 
 - name: dev
   services:

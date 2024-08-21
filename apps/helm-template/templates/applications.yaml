@@ -1,4 +1,4 @@
-{{- range $project := .Values.projects }}
+{{- range $project := .Values.environments }}
 
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
@@ -20,7 +20,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .name }}
+  name: {{ $project.name }}-{{ .name }}
   namespace: argocd
 spec:
   project: {{ $project.name }}
