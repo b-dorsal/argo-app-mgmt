@@ -1,0 +1,20 @@
+{{- range .Values.projects }}
+apiVersion: argoproj.io/v1alpha1
+kind: Project
+metadata:
+  name: {{ .name }}
+spec:
+  description: {{ .name }} created by argo
+  sourceRepos:
+    - '*'
+  destinations:
+    - name: in-cluster
+      namespace: {{ .name }}
+  clusterResourceWhitelist:
+    - group: '*'
+      resource: '*'
+  namespaceResourceBlacklist:
+    - group: '*'
+      resource: '*'
+---
+{{- end }}
