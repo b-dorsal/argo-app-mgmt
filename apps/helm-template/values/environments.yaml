@@ -7,7 +7,7 @@ environments:
     - name: nginx-b
       helmValuesFile: values/dev-values.yaml
 - name: brian
-  replicaCount: 2
+  replicaCount: 1
   services:
     - name: nginx-a
       helmValuesFile: values/brian-values.yaml
