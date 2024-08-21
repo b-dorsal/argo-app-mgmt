@@ -1,6 +1,5 @@
 environments:
 - name: dev
-  host: dev.example.com
   replicaCount: 1
   services:
     - name: nginx-a
@@ -8,7 +7,6 @@ environments:
     - name: nginx-b
       helmValuesFile: values/dev-values.yaml
 - name: brian
-  host: brian.example.com
   replicaCount: 2
   services:
     - name: nginx-a
