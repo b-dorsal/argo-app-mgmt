@@ -4,15 +4,5 @@ kind: AppProject
 metadata:
   name: {{ .name }}
   namespace: argocd
-spec:
-  description: {{ .name }}
-  sourceRepos:
-    - '*'
-  destinations:
-    - name: in-cluster
-      namespace: argocd
-  clusterResourceWhitelist:
-    - group: '*'
-      resource: '*'
 ---
 {{- end }}
