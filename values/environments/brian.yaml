@@ -1,0 +1,14 @@
+
+namespace: brian
+
+nginx-a:
+  namespace: brian
+  replicaCount: 2
+  image:
+    tag: "1.23.1"
+
+nginx-b:
+  namespace: brian
+  replicaCount: 2
+  image:
+    tag: "1.23.1"

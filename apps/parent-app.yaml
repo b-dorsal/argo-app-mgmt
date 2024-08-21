@@ -12,6 +12,7 @@ spec:
     helm:
       valueFiles:
         - values.yaml
+        - ../../values/environments.yaml
   destination:
     name: in-cluster
     namespace: argocd

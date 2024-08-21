@@ -3,28 +3,9 @@ environments:
 - name: dev
   services:
     - name: nginx-a
-      helmValues:
-        replicaCount: 2
-        namespace: dev
-        image:
-          repository: nginx
-          tag: latest
-
     - name: nginx-b
-      helmValues:
-        replicaCount: 1
-        namespace: dev
-        image:
-          repository: nginx
-          tag: latest
 
 
 - name: brian
   services:
     - name: nginx-a
-      helmValues:
-        namespace: brian
-        replicaCount: 1
-        image:
-          repository: nginx
-          tag: latest
