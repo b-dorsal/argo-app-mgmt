@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-brian
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
+    path: charts/nginx
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+      - values/brian-values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: brian
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

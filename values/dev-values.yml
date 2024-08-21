@@ -1,0 +1,5 @@
+namespace: dev
+replicaCount: 1
+image:
+  tag: "1.23.1"
+host: "dev.example.com"
