@@ -12,12 +12,12 @@ namespace: dev
     tag: "1.23.1"
 
 configmaps:
-  - name: google.config
+  google.config:
     data: 
       goog_URL: "www.google.com"
       goog_port: "443"
 
-  - name: app.config
+  app.config:
     data: 
       FORCE_AP_2FA: "false"
       use_tls: "false"
