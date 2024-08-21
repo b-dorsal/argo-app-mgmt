@@ -17,6 +17,6 @@ spec:
       prune: true
       selfHeal: true
   componentParameterOverrides:
-    - name: dev-app.yaml
-    - name: staging-app.yaml
-    - name: prod-app.yaml
+    - name: dev-app.yml
+    - name: staging-app.yml
+    - name: prod-app.yml

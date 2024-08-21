@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-      - values/brian-values.yaml
+      - values/brian-values.yml
   destination:
     server: https://kubernetes.default.svc
     namespace: brian
