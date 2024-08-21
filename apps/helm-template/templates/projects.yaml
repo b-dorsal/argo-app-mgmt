@@ -5,16 +5,13 @@ metadata:
   name: {{ .name }}
   namespace: argocd
 spec:
-  description: {{ .name }} created by argo
+  description: {{ .name }}
   sourceRepos:
     - '*'
   destinations:
     - name: in-cluster
       namespace: argocd
   clusterResourceWhitelist:
-    - group: '*'
-      resource: '*'
-  namespaceResourceBlacklist:
     - group: '*'
       resource: '*'
 ---
