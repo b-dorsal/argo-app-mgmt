@@ -6,15 +6,10 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  sources:
-    {{- range .services }}
-    - repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
-      path: charts/{{ .name }}
-      targetRevision: HEAD
-      helm:
-        valueFiles:
-        - {{ .helmValuesFile }}
-    {{- end }}
+  source:
+    repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
+    path: charts
+    targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ .name }}
@@ -22,5 +17,14 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  sources:
+  {{- range .services }}
+    - repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
+      path: charts/{{ .name }}
+      targetRevision: HEAD
+      helm:
+        valueFiles:
+        - {{ .helmValuesFile }}
+  {{- end }}
 ---
 {{- end }}
