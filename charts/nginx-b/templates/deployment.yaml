@@ -4,7 +4,7 @@ metadata:
   name: nginx-b
   namespace: {{ .Values.namespace }}
 spec:
-  replicas: {{ .Values.nginx-b.replicaCount }}
+  replicas: {{ .Values.'nginx-b'.replicaCount }}
   selector:
     matchLabels:
       app: nginx-b
