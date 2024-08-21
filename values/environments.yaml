@@ -6,10 +6,17 @@ environments:
       helmValues:
         replicaCount: 2
         namespace: dev
+        image:
+          repository: nginx
+          tag: latest
+
     - name: nginx-b
       helmValues:
         replicaCount: 1
         namespace: dev
+        image:
+          repository: nginx
+          tag: latest
 
 
 - name: brian
@@ -18,3 +25,6 @@ environments:
       helmValues:
         namespace: brian
         replicaCount: 1
+        image:
+          repository: nginx
+          tag: latest
