@@ -30,7 +30,7 @@ spec:
     targetRevision: HEAD
     helm:
       parameters:
-      {{- toYaml .helmValues | nindent 8 }}
+      {{- toYaml .helmValues | nindent 6 }}
   destination:
     name: in-cluster
     namespace: {{ .name }}
