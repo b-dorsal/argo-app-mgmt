@@ -6,7 +6,7 @@ metadata:
   name: {{ $.name }}
   namespace: argocd
 spec:
-  project: default
+  project: {{ $.name }}
   source:
     repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
     path: charts/{{ .name }}
