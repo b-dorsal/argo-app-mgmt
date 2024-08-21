@@ -4,7 +4,7 @@ metadata:
   name: nginx-b
   namespace: {{ .Values.namespace }}
 spec:
-  replicas: {{ .Values.'nginx-b'.replicaCount }}
+  replicas: {{ index .Values "nginx-a" "replicaCount" }}
   selector:
     matchLabels:
       app: nginx-b
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:{{ .Values.nginx-b.image.tag }}
+        image: nginx:{{ index .Values "nginx-b" "image" "tag" }}
         ports:
         - containerPort: 80
