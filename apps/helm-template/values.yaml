@@ -1,0 +1,2 @@
+environments:
+  {{- include "getEnvironments" ( .Files.Get "environments.yaml" ) }}

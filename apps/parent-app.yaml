@@ -1,12 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: environments
+  name: all-environments
+  namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
-    path: apps
+    path: apps/helm-template
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
@@ -15,6 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-  componentParameterOverrides:
-    - name: dev-app.yaml
-    - name: brian-app.yaml
