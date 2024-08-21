@@ -2,11 +2,11 @@
 namespace: brian
 
 'nginx-a':
-  replicaCount: 2
+  replicaCount: 1
   image:
     tag: "1.23.1"
 
 'nginx-b':
-  replicaCount: 2
+  replicaCount: 1
   image:
     tag: "1.23.1"
