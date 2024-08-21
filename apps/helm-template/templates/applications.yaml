@@ -1,9 +1,9 @@
-{{- range .Values.projects }}
+{{- range $project := .Values.projects }}
 
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: {{ .name }}
+  name: {{ $project.name }}
   namespace: argocd
 spec:
   clusterResourceWhitelist:
@@ -23,7 +23,7 @@ metadata:
   name: {{ .name }}
   namespace: argocd
 spec:
-  project: {{ $.name }}
+  project: {{ $project.name }}
   source:
     repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
     path: charts/{{ .name }}
