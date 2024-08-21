@@ -10,3 +10,12 @@ namespace: dev
   replicaCount: 1
   image:
     tag: "1.23.1"
+
+configmaps:
+  - name: google_url
+    data: 
+      goog_URL: 'www.google.com'
+
+  - name: app.config
+    data: 
+      FORCE_AP_2FA: 'false'
