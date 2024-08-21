@@ -15,8 +15,8 @@ namespace: brian
 configmaps:
   - name: google_url
     data: 
-      goog_URL: 'www.google.com'
+      goog_URL: "www.google.com"
 
   - name: app.config
     data: 
-      FORCE_AP_2FA: 'false'
+      FORCE_AP_2FA: "false"
