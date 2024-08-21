@@ -5,7 +5,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ $configmap.name }}
-  namespace: {{ .Values.namespace }}
+  namespace: {{ $Values.namespace }}
 data:
   {{ $configmap.data }}
 
