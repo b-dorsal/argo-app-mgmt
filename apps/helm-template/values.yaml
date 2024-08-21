@@ -1,8 +1,1 @@
 environments:
-  - name: dev
-    host: dev.example.com
-    replicaCount: 1
-    helmValuesFile: values/dev-values.yaml
-    services:
-      - name: nginx-a
-      - name: nginx-b

@@ -7,7 +7,7 @@ metadata:
 spec:
   project: default
   sources:
-    {{- range .Values.environments }}
+    {{- range .services }}
     repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
     path: charts/{{ .name }}
     targetRevision: HEAD
