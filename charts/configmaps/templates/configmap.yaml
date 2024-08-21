@@ -8,6 +8,6 @@ metadata:
   namespace: {{ $.Values.namespace }}
 data:
   {{- range $key, $val  := $configmap.data }}
-  {{ $key }} : "{{ $val }}"
+  {{ $key }} : '{{ $val }}'
   {{- end }}
 {{- end }}
