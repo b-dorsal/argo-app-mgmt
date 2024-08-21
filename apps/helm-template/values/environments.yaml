@@ -12,4 +12,4 @@ environments:
   replicaCount: 2
   services:
     - name: nginx-a
-      helmValuesFile: values/dev-values.yaml
+      helmValuesFile: values/brian-values.yaml
