@@ -33,7 +33,7 @@ spec:
       {{- toYaml .helmValues | nindent 6 }}
   destination:
     name: in-cluster
-    namespace: {{ .name }}
+    namespace: {{ $project.name }}
   syncPolicy:
     automated:
       prune: true
