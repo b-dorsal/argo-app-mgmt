@@ -9,6 +9,9 @@ spec:
     repoURL: https://github.com/b-dorsal/argo-app-mgmt.git
     path: apps/helm-template
     targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values/environments.yaml
   destination:
     name: in-cluster
     namespace: argocd
