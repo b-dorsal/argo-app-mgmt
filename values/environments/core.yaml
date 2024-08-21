@@ -11,12 +11,12 @@
 
 
 configmaps:
-  google.config:
+  'google.config':
     data: 
       goog_URL: "www.google.com"
       goog_port: "443"
 
-  app.config:
+  'app.config':
     data: 
       FORCE_AP_2FA: "true"
       use_tls: "true"

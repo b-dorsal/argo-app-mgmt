@@ -13,7 +13,7 @@ namespace: brian
     tag: "1.23.1"
 
 configmaps:
-  google.config:
+  'google.config':
     data: 
       goog_URL: "www.google.com"
       goog_port: "443"
