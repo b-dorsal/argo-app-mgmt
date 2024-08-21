@@ -3,6 +3,7 @@ namespace: brian
 
 'nginx-a':
   replicaCount: 1
+  ingressHost: hello.example
   image:
     tag: "1.23.1"
 
