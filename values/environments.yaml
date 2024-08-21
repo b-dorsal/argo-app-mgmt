@@ -9,3 +9,4 @@ environments:
 - name: brian
   services:
     - name: nginx-a
+    - name: nginx-b
