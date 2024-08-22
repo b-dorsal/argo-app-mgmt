@@ -1,5 +1,7 @@
 namespace: default
 replicaCount: 1
+ingressHost: "example.com"
 image:
   name: nginx
   tag: "1.23.1"
+
