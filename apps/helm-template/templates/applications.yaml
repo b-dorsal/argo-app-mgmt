@@ -16,8 +16,9 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - ../../values/environments/core.yaml
-        - ../../values/environments/{{ $project.name }}.yaml
+        - ../../values/environments/core/{{ .name }}.yaml
+        - ../../values/environments/{{ $project.name }}/{{ $project.name }}.yaml
+        - ../../values/environments/{{ $project.name }}/{{ .name }}.yaml
   destination:
     name: in-cluster
     namespace: {{ $project.name }}

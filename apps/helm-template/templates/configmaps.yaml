@@ -13,8 +13,8 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - ../../values/environments/core.yaml
-        - ../../values/environments/{{ $project.name }}.yaml
+        - ../../values/environments/core/core.yaml
+        - ../../values/environments/{{ $project.name }}/{{ $project.name }}.yaml
   destination:
     name: in-cluster
     namespace: {{ $project.name }}

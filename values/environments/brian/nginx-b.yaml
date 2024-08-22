@@ -1,0 +1,4 @@
+replicaCount: 1
+image:
+  name: nginx
+  tag: "1.23.1"

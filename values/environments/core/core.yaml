@@ -1,15 +1,4 @@
 
-'nginx-a':
-  replicaCount: 1
-  image:
-    tag: "1.23.1"
-
-'nginx-b':
-  replicaCount: 1
-  image:
-    tag: "1.23.1"
-
-
 configmaps:
   google.config:
     data: 
