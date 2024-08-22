@@ -1,4 +1,5 @@
 namespace: default
 replicaCount: 1
 image:
-  tag: "1.23.1"
+  name: briand52/nginx-b
+  tag: "1"
