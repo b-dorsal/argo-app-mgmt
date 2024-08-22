@@ -1,5 +1,5 @@
-∂
-{{- range $configMapName, $configMapData := $configmaps }}
+
+{{- range $configMapName, $configMapData := .Values.configmaps }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
