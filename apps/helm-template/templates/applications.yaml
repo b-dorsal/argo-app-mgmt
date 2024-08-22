@@ -8,6 +8,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: briand52/nginx-a
+    argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   project: {{ $project.name }}
   source:
