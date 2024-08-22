@@ -1,4 +1,5 @@
 namespace: default
 
 configmaps:
-  -name: blank
+  name:
+    data:
