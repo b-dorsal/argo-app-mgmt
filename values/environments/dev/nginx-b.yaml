@@ -1,4 +1,4 @@
 replicaCount: 1
 image:
-  name: nginx
-  tag: "1.23.1"
+  name: briand52/nginx-a
+  tag: "1"
