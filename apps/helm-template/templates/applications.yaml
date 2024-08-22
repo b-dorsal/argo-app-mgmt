@@ -9,6 +9,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: briand52/nginx-a
     argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/app.update-strategy: latest
 spec:
   project: {{ $project.name }}
   source:
