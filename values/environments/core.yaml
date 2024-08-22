@@ -18,5 +18,5 @@ configmaps:
 
   app.config:
     data: 
-      FORCE_AP_2FA: "false"
+      FORCE_AP_2FA: "true"
       use_tls: "false"
