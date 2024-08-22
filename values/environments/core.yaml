@@ -14,7 +14,7 @@ configmaps:
   google.config:
     data: 
       goog_URL: "www.google.com"
-      goog_port: "443"
+      goog_port: "80"
 
   app.config:
     data: 
