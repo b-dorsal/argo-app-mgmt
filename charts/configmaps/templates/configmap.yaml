@@ -1,4 +1,7 @@
-{{- range $configMapName, $configMapData := .Values.configmaps }}
+
+{{- $configmaps := merge .Values.configmaps .Values.overrides.configmaps }}
+
+{{- range $configMapName, $configMapData := $configmaps }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
