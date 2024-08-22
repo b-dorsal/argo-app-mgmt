@@ -6,7 +6,8 @@ kind: Application
 metadata:
   name: {{ $project.name }}-{{ .name }}
   namespace: argocd
-
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: briand52/{{ .name }}
 spec:
   project: {{ $project.name }}
   source:
