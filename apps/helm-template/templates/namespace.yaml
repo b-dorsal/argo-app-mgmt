@@ -1,0 +1,11 @@
+{{- range $project := .Values.environments }}
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: {{ $project.name }}
+  labels:
+    name: {{ $project.name }}
+---
+
+{{- end }}
