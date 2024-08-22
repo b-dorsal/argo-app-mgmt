@@ -7,7 +7,7 @@ metadata:
   name: {{ $project.name }}-{{ .name }}
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: docker.io/briand52/{{ .name }}
+    argocd-image-updater.argoproj.io/image-list: nginx
 spec:
   project: {{ $project.name }}
   source:
