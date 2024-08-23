@@ -4,5 +4,5 @@ helm:
     value: briand52/nginx-b
     forcestring: true
   - name: image.tag
-    value: 6-brian
+    value: brian-7
     forcestring: true
