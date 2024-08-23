@@ -10,7 +10,7 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: briand52/{{ .name }}
     argocd-image-updater.argoproj.io/{{ .name }}.tag: regex
     argocd-image-updater.argoproj.io/{{ .name }}.allow-tags: ^{{ $project.name }}-[0-9]+$
-    argocd-image-updater.argoproj.io/{{ .name }}.semver: ^[0-9]+
+    argocd-image-updater.argoproj.io/{{ .name }}.semver: ^({{ $project.name }})-([0-9]+)$
     argocd-image-updater.argoproj.io/write-back-method: git
     
   labels:
