@@ -7,10 +7,10 @@ metadata:
   name: {{ $project.name }}-{{ .name }}
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: briand52/{{ .name }}
-    argocd-image-updater.argoproj.io/{{ .name }}.tag: regex
-    argocd-image-updater.argoproj.io/{{ .name }}.allow-tags: "^({{ $project.name }})-[0-9]+$"
-    argocd-image-updater.argoproj.io/{{ .name }}.sort: name
+    argocd-image-updater.argoproj.io/image-list: {{ $project.name }}-{{ .name }}=briand52/{{ .name }}
+    argocd-image-updater.argoproj.io/{{ $project.name }}-{{ .name }}.tag: regex
+    argocd-image-updater.argoproj.io/{{ $project.name }}-{{ .name }}.allow-tags: "^({{ $project.name }})-[0-9]+$"
+    argocd-image-updater.argoproj.io/{{ $project.name }}-{{ .name }}.update-strategy: name
     argocd-image-updater.argoproj.io/write-back-method: git
     
   labels:
