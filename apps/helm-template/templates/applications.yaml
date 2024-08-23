@@ -8,8 +8,11 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: briand52/{{ .name }}
+    argocd-image-updater.argoproj.io/{{ .name }}.tag: regex
+    argocd-image-updater.argoproj.io/{{ .name }}.allow-tags: ^[0-9]+-{{ $project.name }}$
+    argocd-image-updater.argoproj.io/{{ .name }}.semver: ^[0-9]+
     argocd-image-updater.argoproj.io/write-back-method: git
-    # argocd-image-updater.argoproj.io/app.update-strategy: latest
+    
   labels:
     environment: nonprod
 spec:
