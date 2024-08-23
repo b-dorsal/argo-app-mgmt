@@ -5,6 +5,8 @@ kind: AppProject
 metadata:
   name: {{ $project.name }}
   namespace: argocd
+  labels:
+    environment: nonprod
 spec:
   clusterResourceWhitelist:
     - group: '*'
