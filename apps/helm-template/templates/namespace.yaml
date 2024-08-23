@@ -6,6 +6,7 @@ metadata:
   name: {{ $project.name }}
   labels:
     name: {{ $project.name }}
+    environment: nonprod
 ---
 
 {{- end }}
