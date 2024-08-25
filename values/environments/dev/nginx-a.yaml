@@ -1,5 +1,2 @@
 replicaCount: 2
 ingressHost: hello2.example
-image:
-  name: briand52/nginx-a
-  tag: "1"
