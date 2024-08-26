@@ -1,3 +1,5 @@
 image:
   name: briand52/nginx-a
   tag: "master"
+
+ingressHost: hello.example
