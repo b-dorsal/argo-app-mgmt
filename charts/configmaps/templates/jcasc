@@ -1,0 +1,55 @@
+<securityRealm class="org.miniorange.saml.MoSAMLAddIdp" plugin="miniorange-saml-sp@2.4.3">
+    <idpEntityId>http://www.okta.com/TESTTEST</idpEntityId>
+    <ssoUrl>https://sso.TEST.com/app...</ssoUrl>
+    <metadataUrl>https://sso.TEST.com/sso/saml/metadata</metadataUrl>
+    <metadataFilePath></metadataFilePath>
+    <publicx509Certificate>ABS123TEST</publicx509Certificate>
+    <usernameAttribute>NameID</usernameAttribute>
+    <fullnameAttribute></fullnameAttribute>
+    <usernameCaseConversion>none</usernameCaseConversion>
+    <userAttributeUpdate>false</userAttributeUpdate>
+    <emailAttribute>NameID<emailAttribute>
+    <nameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</nameIDFormat>
+    <sslURL></sslURL>
+    <loginType>usernameLogin</loginType>
+    <regexPattern></regexPattern>
+    <enableRegexPattern>false</enableRegexPattern>
+    <signedRequest>false</signedRequest>
+    <splitnameAttribute>false</splitnameAttribute>
+    <userCreate>true</userCreate>
+    <forceAuthn>false</forceAuthn>
+    <ssoBindingType>HttpRedirect</ssoBindingType>
+    <sloBindingType>HttpRedirect</sloBindingType>
+    <samlCustomAttributes/>
+    <newUserGroup></newUserGroup>
+    <authnContextClass></authnContextClass>
+</securityRealm>
+
+
+jenkins:
+  securityRealm:
+    saml:
+      idpEntityId: "http://www.okta.com/TESTTEST"
+      ssoUrl: "https://sso.TEST.com/app..."
+      metadataUrl: "https://sso.TEST.com/sso/saml/metadata"
+      metadataFilePath: ""
+      publicx509Certificate: "ABS123TEST"
+      usernameAttribute: "NameID"
+      fullnameAttribute: ""
+      usernameCaseConversion: "none"
+      userAttributeUpdate: false
+      emailAttribute: "NameID"
+      nameIDFormat: "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
+      sslURL: ""
+      loginType: "usernameLogin"
+      regexPattern: ""
+      enableRegexPattern: false
+      signedRequest: false
+      splitnameAttribute: false
+      userCreate: true
+      forceAuthn: false
+      ssoBindingType: "HttpRedirect"
+      sloBindingType: "HttpRedirect"
+      samlCustomAttributes: {}
+      newUserGroup: ""
+      authnContextClass: ""
